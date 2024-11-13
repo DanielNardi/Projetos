@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/banco.css">
+    <title>Banco</title>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="user-icon"><img src="../imagens/fotoUsuario.jpg" width="50px"></div>
+            <div class="user-info">
+                <p>Olá, <span id="nome_usuario">nome_do_usuario</span></p>
+                <p><span id="email_usuario">email_do_usuario</span></p>
+            </div>
+        </div>
+    
+        <!-- Conteúdo principal -->
+        <div class="main-content">
+            <!-- Seção Conta -->
+            <div class="account-section">
+                <h3>Conta</h3>
+                <div class="balance">R$ <span id="valor_na_conta">0,00</span></div>
+                <div class="options">
+                    <div class="option" onclick="handleOptionClick('Pix')">Pix</div>
+                    <div class="option" onclick="handleOptionClick('Boletos')">Boletos</div>
+                    <div class="option" onclick="handleOptionClick('Transferir')">Transferir</div>
+                    <div class="option" onclick="handleOptionClick('Recarga')">Recarga</div>
+                    <div class="option" onclick="handleOptionClick('Investimentos')">Investimentos</div>
+                    <div class="option" onclick="handleOptionClick('Outros')">Outros</div>
+                </div>
+            </div>
+    
+            <!-- Seção Meus Cartões -->
+            <div class="cards-section">
+                <h3>Meus Cartões</h3>
+                <!-- Cartão Débito -->
+                <div class="card">
+                    <img src="../imagens/cartaoCredito.png" width="250">
+                    <p><strong>Débito</strong></p>
+                    <p>Número: <span id="numero_cartao_debito">**** **** **** 0000</span></p>
+                    <p>3 Dígitos: <span id="cvv_debito">123</span></p>
+                    <p>Nome: <span id="nome_usuario_cartao_debito">nome_do_usuario</span></p>
+                    <p>Data: <span id="data_validade_debito">MM/AA</span></p>
+                </div>
+                <!-- Cartão Crédito -->
+                <div class="card">
+                    <img src="../imagens/cartaoCredito.png" width="250">
+                    <p><strong>Crédito</strong></p>
+                    <p>Número: <span id="numero_cartao_credito">**** **** **** 0000</span></p>
+                    <p>3 Dígitos: <span id="cvv_credito">123</span></p>
+                    <p>Nome: <span id="nome_usuario_cartao_credito">nome_do_usuario</span></p>
+                    <p>Data: <span id="data_validade_credito">MM/AA</span></p>
+                    <p class="card-limit">Limite: R$ <span id="valor_limite_cartao">0,00</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/banco.js"></script>
+    
+</body>
+</html>
